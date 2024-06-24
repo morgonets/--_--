@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECOND</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffffff, #e0e0e0);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            font-size: 24px;
+            overflow: hidden;
+        }
+        #message {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #fireworks-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Какие планы на ету неделю?😅</div>
+    <div id="fireworks-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.umd.min.js"></script>
+    <script>
+        const container = document.getElementById('fireworks-container');
+        const fireworks = new Fireworks.default(container, {
+            speed: 2,
+            acceleration: 1.05,
+            friction: 0.97,
+            gravity: 1.5,
+            particles: 50,
+            trace: 3,
+            explosion: 5,
+            autoresize: true,
+            brightness: { min: 50, max: 80, decay: { min: 0.015, max: 0.03 } }
+        });
+
+        fireworks.start();
+    </script>
+</body>
+</html>

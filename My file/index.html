@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #000000, #434343);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            font-size: 24px;
+        }
+        #click-message {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="click-message">Тыкни 10 раз🥺</div>
+    <script>
+        let clickCount = 0;
+        document.body.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 10) {
+                window.location.href = '2index.html';
+            }
+        });
+    </script>
+</body>
+</html>
